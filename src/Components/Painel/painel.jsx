@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Card from '../Card/card';
+import './painel.css'
 
 const Painel = () => {
 
@@ -45,9 +46,6 @@ const Painel = () => {
                 <button className='buttonEnabled' onClick={ () => refresh(nextPage)}>Próxima Página</button>  
             </div>
         </div>
-
-        
-        
     );
 }
 

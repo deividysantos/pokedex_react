@@ -7,6 +7,8 @@ import { lightTheme } from '../../style/lightTheme'
 import { darkTheme } from '../../style/darkTheme'
 import React, {useState} from "react";
 
+import './home.css';
+
 const Home = () => {
 
     const [isDarkTheme, setIsDarkTheme] = useState(localStorage.getItem('theme'))

@@ -1,6 +1,7 @@
+import React, {useState, useEffect} from "react";
 import { RiSunFill } from 'react-icons/ri'
 import { RiMoonLine } from 'react-icons/ri'
-import React, {useState, useEffect} from "react";
+import './theme.css'
 
 const Theme = (props) => {
 

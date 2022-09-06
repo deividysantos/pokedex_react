@@ -5,12 +5,6 @@ import React from 'react';
 import Home from './Views/home/home';
 import Pokemon from './Views/pokemon/pokemon';
 
-import './Components/Painel/painel.css'
-import './Components/Search/search.css';
-import './Components/Theme/theme.css'
-import './Components/Card/card.css';
-import './Views/pokemon/pokemon.css'
-import './Views/home/home.css';
 import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,15 +1,13 @@
 import React, {useState, useEffect} from "react";
+import './search.css';
 import { BiSearch } from 'react-icons/bi';
+import { useNavigate  } from 'react-router-dom';
 
 
 const Search = () => {
-
+    const navigate = useNavigate();
     const [search, setSearch] = useState('');
     const [pokemon, setPokemon] = useState({});
-
-    useEffect( () => {
-        
-    }, [search] );
 
     const seek = () => {
         fetch('https://pokeapi.co/api/v2/pokemon/' + search)
@@ -21,15 +19,13 @@ const Search = () => {
                 type: json.types[0].type.name
             });
         } ).catch(err => console.log(err))
-    };
 
-    useEffect( () => {
-        
-    }, [pokemon]);
+        navigate("/pokemon/" + search);
+    };
 
     return (
         <div className="search">
-            <input className="searchInput" placeholder='Pesquisar' type="text" name="search" id="search" onChange={(e) => setSearch(e.target.value)}/>
+            <input className="searchInput" placeholder='Pesquisar' type="text" name="search" id="search" onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
             <BiSearch className="BiSearch" onClick={() => seek() }/>
         </div>
     );
