@@ -1,3 +1,5 @@
+import getColorByType from "../../Services/ColorTypeService.js"
+import Theme from '../../Components/Theme/theme.jsx'
 import React, {useState, useEffect} from "react";
 import { useParams } from 'react-router-dom';
 
@@ -12,14 +14,28 @@ const Pokemon = () => {
             setPoke({
                 imageDreamWord: json.sprites.other.dream_world.front_default,
                 imageDefault: json.sprites.front_default,
-                type: json.types[0].type.name
+                type: json.types[0].type.name,
+                name: json.name,
+                color: getColorByType(json.types[0].type.name)
             })
         });
     }, []);
 
     return (
-        <div style={{backgroundColor: poke.color}} className="card">
-            <img className="pokemonImg" src={poke.imageDreamWord ? poke.imageDreamWord : poke.imageDefault} alt={pokemonName}/>
+        <div>
+            <Theme/>
+            <div className="pokeProfileCard" style={{backgroundColor: poke.color}}>
+                <p className="pokeProfileName">{poke.name}</p>
+                <div className="pokeProfileImg">
+                    <img className=""   src={poke.imageDreamWord ? poke.imageDreamWord : poke.imageDefault} alt={pokemonName}/>
+                </div>
+                
+                <div className="pokeProfileStatistics">
+                    Tipos: {poke.type}
+                </div>
+
+            </div>
+            
         </div>
     );
 }

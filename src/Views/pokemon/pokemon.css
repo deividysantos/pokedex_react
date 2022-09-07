@@ -1,0 +1,22 @@
+.pokeProfileCard{
+    
+    
+}
+
+.pokeProfileName{
+    text-transform: capitalize;  
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.pokeProfileImg{
+    padding: 15px;
+    margin: 0 auto;
+    width: max-content;
+}
+
+.pokeProfileImgT{
+    width: 500px;
+    height: 500px;
+}

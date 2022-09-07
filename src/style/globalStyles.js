@@ -11,7 +11,6 @@ export default createGlobalStyle`
 }
 
 body {   
-  transition: all 0.25s linear;
   background-color: var(--bg-color);
 }
 `;
