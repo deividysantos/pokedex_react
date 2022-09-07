@@ -1,6 +1,7 @@
-import React, {useState} from "react";
-import {useNavigate} from 'react-router-dom';
+import React, {useState, useEffect} from "react";
 import { BiSearch } from 'react-icons/bi';
+import { useNavigate  } from 'react-router-dom';
+import './search.css';
 
 
 const Search = () => {
@@ -17,7 +18,7 @@ const Search = () => {
 
     return (
         <div className="search">
-            <input className="searchInput" placeholder='Pesquisar'  type="text" name="search" id="search" onChange={(e) => setSearch(e.target.value)}/>
+            <input className="searchInput" placeholder='Pesquisar' type="text" name="search" id="search" onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
             <BiSearch className="BiSearch" onClick={() => seek() }/>
         </div>
     );

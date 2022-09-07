@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import getColorByType from "../../Services/ColorTypeService.js"
+import './card.css';
 
 const Card = ({name, url}) => {
 
