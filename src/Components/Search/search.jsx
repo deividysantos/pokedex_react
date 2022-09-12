@@ -10,6 +10,10 @@ const Search = () => {
 
     const seek = (e) => {
         e.preventDefault();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7ce49e516d891b0727bdeb704ba4bae779483a09
         fetch('https://pokeapi.co/api/v2/pokemon/' + search.toLowerCase() )
         .then( (response) => response.json() )
         .then( (json) => {
@@ -18,9 +22,9 @@ const Search = () => {
     };
 
     return (
-        <form onSubmit={(e) => seek(e)}  className="search">
+        <div className="search">
             <input className="searchInput" placeholder='Pesquisar' type="text" name="search" id="search" onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
-            <BiSearch className="BiSearch" onClick={(e) => seek(e) }/>
+            <BiSearch className="BiSearch" onClick={(e) => seek(e)}/>
         </form>
     );
 };
