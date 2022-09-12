@@ -21,7 +21,7 @@ const Card = ({name, url}) => {
     }, []);
 
     return (
-        <Link className="cardLink" to={"/pokemon/" + name} target="_blank">
+        <Link className="cardLink" to={"/pokemon/" + name}>
             <div style={{backgroundColor: pokemon.color}} className="card">
                 <img className="pokemonImg" src={pokemon.imageDreamWord ? pokemon.imageDreamWord : pokemon.imageDefault} alt={name}/>
                 <p className="pokemonName">{name}</p>
